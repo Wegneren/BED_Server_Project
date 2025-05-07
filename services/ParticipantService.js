@@ -11,7 +11,7 @@ class ParticipantService{
 
     async getAllParticipantNames(){
         return await this.Participant.findAll({
-            attributes: ['firstName', 'lastName']
+            attributes: ['email', 'firstName', 'lastName']
         });
     }
 

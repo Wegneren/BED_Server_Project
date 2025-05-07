@@ -20,8 +20,13 @@ router.post('/add', async(req, res) => { //add a user to db.
     if(lastName == null){
         return res.jsend.fail({"lastName": "Please provide lastName"});
     }
+    
     if(dob == null){
         return res.jsend.fail({"dob": "Please provide dob"});
+    }
+    const regex = /^\d{4}-\d{2}-\d{2}$/;
+    if(!regex.test(dob)){
+        return res.jsend.fail({"dob": "dob has incorrect format! ensure the format is yyyy-mm-dd!"});
     }
     if(companyName == null){
         return res.jsend.fail({"companyName": "Please provide companyName"});
