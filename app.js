@@ -77,7 +77,7 @@ app.use(function (err, req, res, next) {
 	res.render('error');
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, () => { //my app would stop after a few seconds, added this temporarily to make sure it doesn't stop.
   console.log(`Server is running on port ${PORT}`);
 });
 module.exports = app;

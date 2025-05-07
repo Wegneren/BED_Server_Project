@@ -21,7 +21,7 @@
 //     "dialect": "mysql"
 //   }
 // }
-
+//new structure is using environment variables
 require('dotenv').config();
 
 console.log({
