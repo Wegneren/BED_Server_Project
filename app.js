@@ -15,7 +15,7 @@ var participant = require('./routes/participants');
 const db = require('./models'); // Import Sequelize models
 const ParticipantService = require('./services/ParticipantService');
 
-db.sequelize.sync({force:true}); //if this is true it will drop the tables and recreate them. Meaning if true, data is not persistent (at least not when I restart)
+db.sequelize.sync({force:false}); //if this is true it will drop the tables and recreate them. Meaning if true, data is not persistent (at least not when I restart)
 
 var app = express();
 
